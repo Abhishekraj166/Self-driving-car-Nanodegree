@@ -11,12 +11,12 @@ A lane detection and tracking program that uses a traditional (i.e. non-machine-
 
 ## Dependencies
 
-If you have already installed all the necessary dependencies for the projects in term 1 you should be good to go! If not, you should install them to get started on this project => [Getting Started for Term 1](../term1_How_to_get_started). 
+INstall all required dependencies
  
 ## Basic Build Instructions
 
 1. Clone or fork this repository.
-2. Launch the Jupyter notebook: `jupyter notebook P4_adv_lane_lines.ipynb`
+2. Launch the Jupyter notebook: 
 3. Execute the code cells you are interested in. 
 Note that cells may depend on previous cells. The notebook explains clearly what each code cell does.
 
