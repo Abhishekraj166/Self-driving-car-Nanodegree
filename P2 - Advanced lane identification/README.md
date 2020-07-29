@@ -6,7 +6,7 @@
 A lane detection and tracking program that uses a traditional (i.e. non-machine-learning) computer vision approach to detect lane lines is implemented here.
 
 <p align="center">
-  <img src="./results/P4_adv_lane_lines_project_video.gif" width="480">
+  <img src="./results/P2_adv_lane_lines_project_video.gif" width="480">
 </p>
 
 ## Dependencies
@@ -190,7 +190,7 @@ In order to make the output smooth I chose to average the coefficients of the po
 
 |Project Video|Challenge Video|
 |-------------|-------------|
-|![Final Result Gif](./results/P4_adv_lane_lines_project_video.gif)|![Challenge Video](./results/P4_adv_lane_lines_challenge_video.gif)|
+|![Final Result Gif](./results/P2_adv_lane_lines_project_video.gif)|![Challenge Video](./results/P2_adv_lane_lines_challenge_video.gif)|
 
 ## Results
 
