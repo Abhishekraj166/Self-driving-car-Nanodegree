@@ -12,20 +12,7 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
----
-###Writeup / README
-
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/andersy005/self-driving-car-nd/blob/master/Project2-Traffic-Sign-Classification/Traffic_Sign_Classifier%20.ipynb)
-
-###Data Set Summary & Exploration
-
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+### Data Set Summary & Exploration
 
 The code for this step is contained in the third code cell of the IPython notebook.  
 
@@ -37,8 +24,6 @@ signs data set:
 - Number of testing examples = 12630
 - Image data shape = (32, 32, 3)
 - Number of classes = 43
-
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the fourth code cell of the IPython notebook.  
 
@@ -54,9 +39,7 @@ training and testing sets.
 
 - The images differ significantly in terms of contrast and brightness. As a result, we will need to apply some kind of data processing to improve feature extraction.
 
-###Design and Test a Model Architecture
-
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+### Design and Test a Model Architecture
 
 The code for this step is contained in the 11th up to 28th  code cells of the IPython notebook.
 
@@ -67,12 +50,6 @@ The code for this step is contained in the 11th up to 28th  code cells of the IP
 * As Pierre Sermanent and Yann LeCun mentioned in their [Traffic Sign Recognition with Multi-Scale Convolutional Networks](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) paper, using color channels didn't seem to improve things a lot and by using grayscale images they still got high accuracy. Nonetheless, I chose to experiment with colored images.
 
 * The following functions from [TFLearn Library](http://tflearn.org/data_augmentation/#image-augmentation) were used for **image augmentation**. The reason behind the image augmentation is the fact that our original training set was highly imbalanced. 
-
-
-
-
-
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 As stated above, our original training data was highly imbalance. Feeding our ConvNet with a balanced dataset helps it learn better.
 I've decided to generate augmented data through three techniques by adding the following trasnformations.
@@ -104,8 +81,6 @@ Here is the same example after data pre processing.
 The provided data had the data splitted into training and validation sets.
 
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
 The code for my final model is located in the 55th cell of the ipython notebook. 
 
 My final model consisted of the following layers:
@@ -126,9 +101,6 @@ My final model consisted of the following layers:
 | RELU                  |                                               |
 | Fully Connected(logits)| Input = 120 Output = 43                      |             |
 
-
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
 The code for training the model is located in the 59th cell of the ipython notebook. 
 
 To train, validate, and test the model, I used 
@@ -139,14 +111,12 @@ To train, validate, and test the model, I used
 - Image data shape = (32, 32, 3)
 - Number of classes = 43
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
-
 The code for calculating the accuracy of the model is located in the 58th cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of **99.8 %**
-* validation set accuracy of **94.5%**
-* test set accuracy of **94.1%**
+* training set accuracy of **99.9 %**
+* validation set accuracy of **96.4%**
+* test set accuracy of **95.4%**
 
 My model is based on Yann Lecun's LeNet Architecture. I added two dropout layers to prevent the ConvNet from co-adapting too
 much which made overfitting less likely.
