@@ -62,6 +62,7 @@ Then for each image, I generated 5 additional images with 5 by randomly rotating
 After Image Augmentation, our training set size was (208794, 32, 32, 3) as it's  shown as the output of the 20th code cell in IPython notebook.
 
 The following figure is the new distribution of signs for each class.
+
 ![](assets/distribution1.png)
 
 - Max observations: 12060
@@ -166,8 +167,7 @@ For the second image, the model is relatively sure that this is a 'Bumpy Road' s
 
 For the third image, the model is relatively sure that this is a 'General Caution' sign (probability of 0.999), and the image does contain General Caution sign.
 
-For the fourth image, the model is relatively sure that this is a 'Speed limit(100km/h)' sign (probability of 0.81). Though this prediction is incorrect, the image contains a Speed limit sign. It's clear
-that the model was not very confident about this one. In fact, the model gave 0.11 probabilily to Speed limit (80km/h) and 0.071 probability to Speed limit (120km/h).
+For the fourth image, the model is relatively sure that this is a 'Speed limit(50km/h)' sign (probability of 0.99). Though this prediction is incorrect, the image contains a Speed limit sign. It's clear that the model was not very confident about this one. 
 
 For the fifth image, the model is relatively sure that this is a 'Stop' sign (probability of 0.999), and the image does contain a Stop sign.
 
