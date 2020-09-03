@@ -238,7 +238,7 @@ The figure below shows the final model loss and validation loss development over
 
 ## Results
 
-The resulting [video](./results/video.mp4) is in the repo, if you are interested. 
+The resulting [video](./results/p3_behavioral_cloning.webm) is in the repo, if you are interested. 
 
 ## Literature
 
