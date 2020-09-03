@@ -205,7 +205,7 @@ Finally a normalization of the images to get the pixel values evenly distributed
 
 After doing all the mentioned driving manoeuvre the data set comprises around 15.000 images. With all augmentation technics like flipping it increased to nearly 30.000  images. The data set was split into a randomly selected training set (80%) and a validation set (the remaining 20%) to monitor the performance of the neural network and to ensure that the model was not overfitting. There is no need to split off a test set as the model testing is done by running the simulator in autonomous mode on the tracks. 
 
-## Model Architectur
+## Model Architecture
 
 As this is a typical image classification problem a convolutional neural was choosen in order to maintain the spatial structure of the images, and the relationships between adjacent pixels. Convolutional neural networks avoid the problem of having to flatten the images into a 1 dimensional vector and are therefore more powerful in recognizing n-dimensional images. 
 The model is inspired by [this Nvidia model](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) where they trained a convolutional neural network for a similar type of problem. 
@@ -226,7 +226,7 @@ The model was compiled with an adam optimizer (learning rate = 6e-4), Mean Squar
 
 ### Preventing overfitting
 
-Despite the strong data augmentation mentioned above, there's still room for the major nightmare of the data scientis, a.c.a. overfitting. In order to prevent the network from falling in love with the training track, dropout layers are aggressively added after each convolutional layer (*drop prob=0.2*) and after each fully-connected layer (*drop prob=0.5*) but the last one.
+Despite the strong data augmentation mentioned above, there's still room for the major nightmare of the data scientist, a.c.a. overfitting. In order to prevent the network from falling in love with the training track, dropout layers are aggressively added after each convolutional layer (*drop prob=0.2*) and after each fully-connected layer (*drop prob=0.5*) but the last one.
 
 ### Training Details
 
@@ -244,10 +244,7 @@ The resulting [video](./results/video.mp4) is in the repo, if you are interested
 
 [End to End Learning for Self-Driving Cars](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)
 
-## Contributing
-
-No further updates nor contributions are requested.  This project is static.
 
 ## License
 
-Term1_project3_behavioral_cloning results are released under the [MIT License](./LICENSE)
+Project 3 behavioral_cloning results are released under the [MIT License](./LICENSE)
