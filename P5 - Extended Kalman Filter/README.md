@@ -7,7 +7,6 @@ Kalman Filter is a mathematical approach of determining the state of the system.
 Sensor fusion - is a process of combining measurements from different sensors to get one accurate picture. Sensor Fusion for object tracking using RADAR and LIDAR sensors is an actual task for the self-driving car. 
 
 ![Kalman_Filters_process_flow](./img/Kalman_Filters_process_flow.jpg)
-Image: Udacity Self-Driving Car Nanodegree  
 
 
 ## Basic Build Instructions
