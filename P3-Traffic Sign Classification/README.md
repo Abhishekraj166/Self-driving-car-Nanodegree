@@ -14,7 +14,6 @@ The goals / steps of this project are the following:
 
 ### Data Set Summary & Exploration
 
-The code for this step is contained in the third code cell of the IPython notebook.  
 
 I used the NumPy library to calculate summary statistics of the traffic
 signs data set:
@@ -24,8 +23,6 @@ signs data set:
 - Number of testing examples = 12630
 - Image data shape = (32, 32, 3)
 - Number of classes = 43
-
-The code for this step is contained in the fourth code cell of the IPython notebook.  
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the number of each sign in the 
 training and testing sets.
@@ -41,13 +38,9 @@ training and testing sets.
 
 ### Design and Test a Model Architecture
 
-The code for this step is contained in the 11th up to 28th  code cells of the IPython notebook.
-
 * For Data Pre-processing, I decided to apply [Contrast Limited Adaptive Histogram Equalization](http://www.cs.utah.edu/~sujin/courses/reports/cs6640/project2/clahe.html) algorithm in the [Lab color space](https://en.wikipedia.org/wiki/Lab_color_space) to do the contrast enhancement.
 
 * In addition to contrast enhancement, I normalized the images between 0-1.
-
-* As Pierre Sermanent and Yann LeCun mentioned in their [Traffic Sign Recognition with Multi-Scale Convolutional Networks](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) paper, using color channels didn't seem to improve things a lot and by using grayscale images they still got high accuracy. Nonetheless, I chose to experiment with colored images.
 
 * The following functions from [TFLearn Library](http://tflearn.org/data_augmentation/#image-augmentation) were used for **image augmentation**. The reason behind the image augmentation is the fact that our original training set was highly imbalanced. 
 
@@ -81,9 +74,6 @@ Here is the same example after data pre processing.
 
 The provided data had the data splitted into training and validation sets.
 
-
-The code for my final model is located in the 55th cell of the ipython notebook. 
-
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -102,7 +92,6 @@ My final model consisted of the following layers:
 | RELU                  |                                               |
 | Fully Connected(logits)| Input = 120 Output = 43                      |             |
 
-The code for training the model is located in the 59th cell of the ipython notebook. 
 
 To train, validate, and test the model, I used 
 
@@ -111,8 +100,6 @@ To train, validate, and test the model, I used
 - Number of testing examples = 12630
 - Image data shape = (32, 32, 3)
 - Number of classes = 43
-
-The code for calculating the accuracy of the model is located in the 58th cell of the Ipython notebook.
 
 My final model results were:
 * training set accuracy of **99.9 %**
